@@ -1,0 +1,58 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: #fffacc;
+}
+
+h1 {
+  font-weight: bold;
+  color: #fffacc;
+  text-align: center;
+  border-radius: 25px;  
+  background-color: #ed2a77;
+  padding: 1em;
+}
+
+h2 {
+  border-top: solid;
+  border-left: solid;
+  border-right: solid;
+  display: inline-block;
+  margin-bottom: 0px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  border-color: #c03479;
+}
+
+p {
+  border-style: solid;
+  margin-top: 0px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  padding: 1em;
+  border-color: #c03479;
+  font-size: 6mm;
+}
+
+.round {
+  border-radius: 25px;
+  padding: 1em;
+  border-color: #c03479;
+}
+
+.imgLocal {
+  width: 100%;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+#kofi {
+  display: table;
+  margin: 0 auto;
+}
