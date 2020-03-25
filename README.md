@@ -1,6 +1,6 @@
 # Glitch-Git
 
-Un tutorial en como integrar Glitch.com con GitHub y Gitlab
+Un tutorial sobre como exportar proyectos en Glitch.com a repositorios en Gitlab y GitHub.
 
 ## Made by [Glitch](https://glitch.com/)
 
