@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Integrando Glitch con Gitlab y GitHub</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Integrando Glitch con Gitlab y GitHub</h1>
+    
+    <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2Fgitlab_github_glitch.png?v=1585114373772"
+        alt="Gitlan, GitHub y Glitch"
+      />
+    
+
+    <h2>
+      Git en Glitch.com
+    </h2>
+    <p>
+      Si ya ha estado trabajado con Glitch seguramente habra notado que los
+      cambios se guardan automaticamente, esto es cortesia de la integración que
+      la plataforma Glitch tiene con el sistema de control de versiones git, de
+      modo que puede regresarse a puntos previos con facilidad.<br /><br />
+
+      Ahora si es un desarollador, seguro tendra una cuenta en GitHub o en
+      Gitlab para almacenar, compartir los programas que halla creado y servir
+      mas o menos como un muestriario de lo que sabe hacer, y dado eso, ¿No
+      seria interesante tener sus proyectos de Glitch tambien en esas
+      plataformas?, Veamos como.
+    </p>
+
+    <h2>Obtener el URL del repositorio de Glitch</h2>
+    <p>
+      Primero vamos a necesitar el URL del repositorio GIT de nuestro proyecto
+      en Glitch, para obtenerlo vaya a boton <em>Tools</em> y presionelo, con
+      esto vera un menú como el de la siguiente figura.
+
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F01_herramientas.png?v=1584345782676"
+        alt="Boton Tools"
+      />
+
+      En ese menú presione el boton <em>Git, Import, and Export</em> esto le
+      desplegara un nuevo menu como se observa en la siguiente figura.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F02_git.png?v=1584345785778"
+        alt="Menu Git, Import, and Export"
+      />
+      Este menu le presenta la URL del proyecto y los botones para copiar la URL
+      directamente y la integración con GitHub, para copiar la URL le recomiendo
+      usar el boton <em>Copy</em> el cual no solo copiara la URL al portapapeles
+      sino que tambien le presentara una indicación de que se copio
+      exitosamente, como se observa a continuación.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F03_copiado.png?v=1584345788342"
+        alt="Notificación de Copia"
+      />
+    </p>
+    <h2>
+      Replicando el repositorio desde GitLab.
+    </h2>
+    <p>
+      Los repositorios en GitLab le dan una opción muy interesante, desde la
+      cual puede replicar un repositorio git automaticamente cada 20 minutos con
+      solo conocer la URL y tener los datos de acceso, lo que nos permite hacer
+      respaldos automaticos de los proyectos en Glitch.com. Para hacer uso de
+      esta funcionalidad cree un nuevo repositorio en GitLab y dejelo vacio.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F04_gitlab.png?v=1584348880983"
+        alt="Repositorio GitLab"
+      />
+      En el menu lateral vaya a <em>configuración</em> y luego a
+      <em>Repositorio</em>
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F05_opcion_repositorio.png?v=1584348885257"
+        alt="Menu Repositorio"
+      />
+      Ahí busque y expanda la opción <em>Replicando Repositorios</em>
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F06_replicando_repositorios.png?v=1584348887926"
+        alt="Replicando Repositorios"
+      />
+      En el cuadro de texto <em>URL del repositorio Git</em> pegue el URL del
+      repositorio Glitch que obtuvimos previamente, no se requiere poner usuario
+      o contraseña el enlace de Glitch se encarga de eso, ya que lo halla hecho
+      haga scroll hacia abajo y busque la opción
+      <em>Dirección de la Réplica</em> esta opción le indicara a GitLab si
+      deseamos copiar los cambios de esa URL a GitLab o que los cambios en
+      GitLab se apliquen al URL indicado, en nuestro caso deseamos que los
+      cambios del repositorio se apliquen a GitLab asi que seleccionaremos
+      <em>Pull</em>.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F08_pull.png?v=1584348892142"
+        alt="Dirección de la réplica"
+      />
+      Presionamos <em>Replicar repositorio</em> y esto agregara el repositorio
+      que indicamos al proyecto.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F09_repositorios_replicados.png?v=1584348896062"
+        alt="Repositorio Replicado"
+      />
+      Esto comenzara la importación de inmediato.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F10_importacion_en_proceso.png?v=1584348898475"
+        alt="Importación en Proceso"
+      />
+      Ya que eso termine el proyecto estara en GitLab.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F11_repositorio_replicado.png?v=1584348901793"
+        alt="Repositorio Replicado"
+      />
+      Y si hace modificaciones en Glitch en aproximadamente 20 minutos esos
+      cambios se veran reflejados en su repositorio en Gitlab
+      <em>automaticamente</em> sin que tenga que mover un solo dedo.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F12_cambios_aplicados.png?v=1584349882471"
+        alt="Cambios aplicados"
+      />
+      Una observación muy importante es como Glitch.com maneja las imagenes y
+      demas elementos multimedia, estos no se guardan en el proyecto sino en una
+      sección aparte llamanda <em>assets</em> por lo que no se replican junto
+      con el proyecto, unicamente se replica el código asi que tenga eso en
+      consideración.
+    </p>
+
+    <h2>
+      Replicando el repositorio en GitHub.
+    </h2>
+    <p>
+      Como seguro vio en la sección Git en Glitch.com el menú
+      <em>Git, Import, Export</em> tiene dos botones que permiten una
+      integración con GitHub con solo presionar un botón, el que nos interesa en
+      este momento es <em>Export to GitHub</em> el que, como su nombre indica,
+      permite exportar un proyecto a GitHub.<br /><br />
+      El primer paso es crear el repositorio en GitHub donde exportaremos el
+      proyecto
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F13_repositorio_github.png?v=1584379944895"
+        alt="Repositorio en GitHub"
+      />
+      Para el correcto funcionamiento de la función exportar debe crear al menos
+      un archivo en la rama master de ese repositorio, recomiendo sea el archivo
+      README.md.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F14_readme_github.png?v=1584380393623"
+        alt="Archivo ReadMe creado"
+      />
+      Ahora si vaya al menú <em>Git, Import, Export</em> en Glitch y presione el
+      boton <em>Export to GitHub</em>, la primera vez solicitara el permiso para
+      conectarse con GitHub, esto le solicitara que escriba su usuario en GitHub
+      y el nombre del repositorio en la forma <em>Usuario</em>/<em
+        >Repositorio</em
+      >
+      como se ve en la figura.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F15_nombre_repositorio.png?v=1584381166963"
+        alt="Nombre repositorio"
+      />
+      Tras esto se le pedira el mensaje commit para esa actualización, puede
+      dejar el mensaje por defecto o incluir uno con la información que
+      necesite.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F16_mensaje_commit.png?v=1584381169529"
+        alt="Mensaje Commit"
+      />
+
+      Ya que el proceso termine vera que en su repositorio GitHub se creo la
+      rama <em>glitch</em>.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F17_rama_glitch.png?v=1584381171800"
+        alt="Rama Glitch"
+      />
+      donde esta nuestro proyecto, esta rama contiene los cambios que hagamos en
+      nuestro proyecto.
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F18_actualizacion.png?v=1584383006216"
+        alt="Cambios en el proyecto"
+      />
+
+      A diferencia de usar GitLab, GitHub no sincroniza los campos
+      automaticamente, por lo que debera realizar la exportación cada vez que
+      quiera que sus cambios se almacenen en su repositorio de GitHub, estos se
+      almacenaran en la rama glitch, el proceso es el mismo y notara los cambios
+      de inmediato.
+
+      <img
+        class="imgLocal"
+        src="https://cdn.glitch.com/69bb0000-ef98-4fc1-9500-ebd2c98fcc24%2F19_cambios.png?v=1584383100193"
+        alt="Nuevos cambios"
+      />
+
+      Ya que tenga su proyecto en una versión que considere lo bastante completa
+      puede usar un <em>Pull request</em> para combinar los cambios de la rama
+      glitch con la rama master, para que esa versión sea la que le aparesca al
+      entrar al repositorio.
+    </p>
+
+    <div id="kofi">
+      <script
+        type="text/javascript"
+        src="https://ko-fi.com/widgets/widget_2.js"
+      ></script>
+      <script type="text/javascript">
+        kofiwidget2.init("Support Me on Ko-fi", "#ed2a77", "Q5Q0EMQV");
+        kofiwidget2.draw();
+      </script>
+    </div>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
